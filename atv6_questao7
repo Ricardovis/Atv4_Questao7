@@ -1,0 +1,36 @@
+programa {
+    
+    inclua biblioteca Matematica --> Mat
+    
+	funcao inicio() {
+		
+		/*Faça um programa que leia quanto dinheiro uma pessoa tem de economia em reais e em
+          seguida:
+          a. Escreva na tela quantos Dólares faltam para comprar um PS5.
+          b. Escreva na tela quantos Reais faltam para comprar um PS5.
+          c. Escreva na tela quantos livros Harry Potter e a Ordem da Fênix poderiam ser 
+          comprados com o mesmo valor.
+		  */
+		limpa()
+		real reais
+		
+		escreva("Olá, quantos reais você tem de economia para a compra do PS5? ")
+		leia(reais)
+		limpa()
+		
+		inteiro real_p_dolar = reais/5.45        //-----> Variável que informa quantos doláres vc tem guardados para o ps5.
+		inteiro falt_dolar = 1300 - real_p_dolar
+		inteiro falt_reais = 1300*5.45 - reais
+		inteiro livros = falt_reais/50
+		
+		escreva("----------------------------------------------------------------------------------------------------------------- \n")
+		escreva("Para a compra de seu PS5, faltam: \n")
+		escreva("================================================================================================================= \n")
+		escreva("Faltam: ", falt_dolar, " dolares \n")
+		escreva("Faltam: ", falt_reais, " reais \n")
+		escreva("E com o valor que falta para a compra do PS5 daria para comprar: ", livros, " livros Harry Potter e a Ordem da Fênix.\n" )
+		escreva("================================================================================================================= \n")
+		escreva("----------------------------------------------------------------------------------------------------------------- \n")
+		
+	}
+}
